@@ -33,6 +33,7 @@ public class User {
         return new UserBuilder();
     }
 
+    //#region Getters & Setters
     public Long getId() {
         return id;
     }
@@ -60,6 +61,7 @@ public class User {
     public Role getRole() {
         return role;
     }
+    //#endregion
 
     public static final class UserBuilder{
         private Long id;
