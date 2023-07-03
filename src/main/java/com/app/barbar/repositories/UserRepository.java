@@ -1,6 +1,6 @@
 package com.app.barbar.repositories;
 
-import com.app.barbar.entities.User;
+import com.app.barbar.security.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
