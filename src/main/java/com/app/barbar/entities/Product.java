@@ -1,10 +1,17 @@
 package com.app.barbar.entities;
 
+import jakarta.persistence.Column;
+
 public abstract class Product {
-   private Double price;
+   @Column(name = "preco", nullable = false)
+    private Double price;
+   @Column(name = "nome", nullable = false)
    private String name;
+   @Column(name = "tipo", nullable = true)
    private EnumBeer enumBeer;
+   @Column(name = "quantidade", nullable = false)
    private Integer quantity;
+   @Column(name = "custo", nullable = false)
    private Double cost;
 
    //#region Getters & Setters

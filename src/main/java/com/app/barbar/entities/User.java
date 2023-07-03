@@ -15,12 +15,12 @@ public class User {
     private String email;
     private String phone;
     private String address;
-    private Role role;
+    private EnumRole role;
 
     public User() {
     }
 
-    private User(Long id, String name, String password, String email, String phone, String address, Role role) {
+    private User(Long id, String name, String password, String email, String phone, String address, EnumRole role) {
         this.id = id;
         this.name = name;
         this.password = password;
@@ -58,7 +58,7 @@ public class User {
         return address;
     }
 
-    public Role getRole() {
+    public EnumRole getRole() {
         return role;
     }
     //#endregion
@@ -70,7 +70,7 @@ public class User {
         private String email;
         private String phone;
         private String address;
-        private Role role;
+        private EnumRole role;
 
         public UserBuilder(){}
         public static UserBuilder builder(){
@@ -98,7 +98,7 @@ public class User {
             this.address = address;
             return this;
         }
-        public UserBuilder role(Role role){
+        public UserBuilder role(EnumRole role){
             this.role = role;
             return this;
         }
