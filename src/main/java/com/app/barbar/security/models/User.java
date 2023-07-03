@@ -59,6 +59,11 @@ public class User {
     public String getEmail() {
         return email;
     }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
     //#endregion
     @Override
     public boolean equals(Object o) {
