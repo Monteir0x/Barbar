@@ -1,20 +1,27 @@
 package com.app.barbar.entities;
 
-import jakarta.persistence.Column;
+import jakarta.persistence.*;
 
-public abstract class Product {
-   @Column(name = "preco", nullable = false)
+@Entity
+public class Product {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @Column(name = "nome", nullable = false)
+    private String name;
+    @Column(name = "preco", nullable = false)
     private Double price;
-   @Column(name = "nome", nullable = false)
-   private String name;
-   @Column(name = "tipo", nullable = true)
-   private EnumBeer enumBeer;
-   @Column(name = "quantidade", nullable = false)
-   private Integer quantity;
-   @Column(name = "custo", nullable = false)
-   private Double cost;
+    @Column(name = "categoria", nullable = false)
+    private ECategory eCategory;
+    @Column(name = "quantidade", nullable = false)
+    private Integer quantity;
+    @Column(name = "custo", nullable = false)
+    private Double cost;
 
-   //#region Getters & Setters
+    //#region Getters & Setters
+    public Long getId() {
+        return id;
+    }
     public Double getPrice() {
         return price;
     }
@@ -31,12 +38,12 @@ public abstract class Product {
         this.name = name;
     }
 
-    public EnumBeer getEnumBeer() {
-        return enumBeer;
+    public ECategory geteCategory() {
+        return eCategory;
     }
 
-    public void setEnumBeer(EnumBeer enumBeer) {
-        this.enumBeer = enumBeer;
+    public void setECategory(ECategory eCategory) {
+        this.eCategory = eCategory;
     }
 
     public Integer getQuantity() {
