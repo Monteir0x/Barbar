@@ -1,4 +1,4 @@
-package com.app.barbar.security.models;
+package com.app.barbar.auth.models;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -33,7 +33,7 @@ public class User {
     @JoinTable(name = "user_roles",
             joinColumns = @JoinColumn(name = "id_user"),
             inverseJoinColumns = @JoinColumn(name = "id_role"))
-    private Set<Role> roles = new HashSet<>();
+    private final Set<Role> roles = new HashSet<>();
 
     public User() {
     }
@@ -63,7 +63,6 @@ public class User {
     public Set<Role> getRoles() {
         return roles;
     }
-
     //#endregion
     @Override
     public boolean equals(Object o) {

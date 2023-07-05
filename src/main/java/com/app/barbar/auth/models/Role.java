@@ -1,4 +1,4 @@
-package com.app.barbar.security.models;
+package com.app.barbar.auth.models;
 
 import jakarta.persistence.*;
 

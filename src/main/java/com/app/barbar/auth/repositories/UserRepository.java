@@ -1,6 +1,6 @@
-package com.app.barbar.security.repositories;
+package com.app.barbar.auth.repositories;
 
-import com.app.barbar.security.models.User;
+import com.app.barbar.auth.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

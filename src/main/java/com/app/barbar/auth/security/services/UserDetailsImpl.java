@@ -1,6 +1,6 @@
-package com.app.barbar.security.services;
+package com.app.barbar.auth.security.services;
 
-import com.app.barbar.security.models.User;
+import com.app.barbar.auth.models.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -36,39 +36,43 @@ public class UserDetailsImpl implements UserDetails {
                                     user.getPassword(),
                                     authorities);
     }
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return null;
     }
 
+    public Long getId() {
+        return id;
+    }
+    public String getEmail() {
+        return email;
+    }
     @Override
     public String getPassword() {
-        return null;
+        return password;
     }
-
     @Override
     public String getUsername() {
-        return null;
+        return username;
     }
 
     @Override
     public boolean isAccountNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isEnabled() {
-        return false;
+        return true;
     }
 }
