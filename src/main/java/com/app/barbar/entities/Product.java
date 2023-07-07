@@ -3,6 +3,7 @@ package com.app.barbar.entities;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "produto")
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
